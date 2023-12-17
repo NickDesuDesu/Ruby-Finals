@@ -19,7 +19,11 @@ class Car < Vehicle
     #
     # @return [String] String representation of the sound of the vehicle.
     #
-    def engine_sound
-        puts("Zoooom Zoooom....") 
+    def engine_sound(state=0)
+        sound = if (state == 0)
+                    "brrrrrr..."
+                else
+                    "Zoooom Zoooom...."
+        puts(sound)
     end
 end
