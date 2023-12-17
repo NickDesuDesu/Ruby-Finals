@@ -21,9 +21,9 @@ vehicles = CSV_OBJECTS[1]
 # @return [Nil] None
 #
 def look_for_spot(floor_number)
-    for (floor in @floors) do
+    for floor in @floors do
         if (floor.floor_number == floor_number)
-            for (p_spot in floor.parking_spots) do
+            for p_spot in floor.parking_spot do
                 if (p_spot.available == "TRUE")
                     return p_spot
                 end

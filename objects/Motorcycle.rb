@@ -23,6 +23,7 @@ class Motorcycle < Vehicle
                     "brrrrrr..."
                 else
                     "Skrrt Skrrt...."
+                end
         puts(sound)
     end
 

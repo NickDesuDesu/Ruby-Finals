@@ -24,6 +24,7 @@ class Car < Vehicle
                     "brrrrrr..."
                 else
                     "Zoooom Zoooom...."
+                end
         puts(sound)
     end
 
