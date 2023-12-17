@@ -19,6 +19,6 @@ class Motorcycle < Vehicle
     # @return [String] String representation of the sound of the vehicle.
     #
     def engine_sound
-        puts "Skrrt Skrrt...."    
+        puts("Skrrt Skrrt....")  
     end
 end

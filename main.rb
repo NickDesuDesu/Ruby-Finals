@@ -42,7 +42,7 @@ while true
         | 2 - Motorcylce                           |
         |------------------------------------------|
     MENU
-    puts menu
+    puts(menu)
 
     choice = gets.chomp
     vehicle = nil
@@ -54,7 +54,7 @@ while true
             |    Enter the plate number of your car    |
             |------------------------------------------|
         MENU
-        puts car_menu
+        puts(car_menu)
 
         vehicle = Car.new(gets.chomp)
         break
@@ -64,13 +64,13 @@ while true
             | Enter the plate number of your motorcyle |
             |------------------------------------------|
         MENU
-        puts motorcyle_menu
+        puts(motorcyle_menu)
         
         vehicle = Motorcycle.new(gets.chomp)
         vehicles << vehicle
         break
     else
-        puts "--!--Please try again--!--"
+        puts("--!--Please try again--!--")
         next
     end
 end
@@ -88,7 +88,7 @@ while true
         | 6 - Exit                                 |
         |------------------------------------------|
     MENU
-    puts menu
+    puts(menu)
 
     choice = gets.chomp
 
@@ -97,7 +97,7 @@ while true
         parking_spot = look_for_spot("A")
 
         if parking_spot == nil
-            puts "--!--There is no available parking spot for that floor--!--"
+            puts("--!--There is no available parking spot for that floor--!--")
             next
         end
 
@@ -107,13 +107,13 @@ while true
         | Do you want to park here? y/n            |
         |------------------------------------------|
         MENU
-        puts menu
+        puts    (menu)
 
         choice = gets.chomp
 
         if choice == "y" || choice == "Y"
-            puts "--!--Your Parking Spot id is #{parking_spot.name}--!--"
-            puts vehicle.engine_sound
+            puts( "--!--Your Parking Spot id is #{parking_spot.name}--!--")
+            puts(vehicle.engine_sound)
             vehicle.parking_spot = parking_spot
             parking_spot = vehicle
             break
@@ -126,7 +126,7 @@ while true
         parking_spot = look_for_spot("B")
 
         if parking_spot == nil
-            puts "--!--There is no available parking spot for that floor--!--"
+            puts("--!--There is no available parking spot for that floor--!--")
             next
         end
 
@@ -136,15 +136,15 @@ while true
         | Do you want to park here? y/n            |
         |------------------------------------------|
         MENU
-        puts menu
+        puts(menu)
 
         choice = gets.chomp
 
         if choice == "y" || choice == "Y"
-            puts "--!--Your Parking Spot id is #{parking_spot.name}--!--"
+            puts("--!--Your Parking Spot id is #{parking_spot.name}--!--")
             vehicle.parking_spot = parking_spot
             parking_spot = vehicle
-            puts vehicle.engine_sound
+            puts(vehicle.engine_sound)
             break
         else 
             next
@@ -155,7 +155,7 @@ while true
         parking_spot = look_for_spot("C")
 
         if parking_spot == nil
-            puts "--!--There is no available parking spot for that floor--!--"
+            puts("--!--There is no available parking spot for that floor--!--")
             next
         end
 
@@ -165,13 +165,13 @@ while true
         | Do you want to park here? y/n            |
         |------------------------------------------|
         MENU
-        puts menu
+        puts(menu)
 
         choice = gets.chomp
 
         if choice == "y" || choice == "Y"
-            puts "--!--Your Parking Spot id is #{parking_spot.name}--!--"
-            puts vehicle.engine_sound
+            puts("--!--Your Parking Spot id is #{parking_spot.name}--!--")
+            puts(vehicle.engine_sound)
             vehicle.parking_spot = parking_spot
             parking_spot = vehicle
             break
@@ -184,7 +184,7 @@ while true
         parking_spot = look_for_spot("D")
 
         if parking_spot == nil
-            puts "--!--There is no available parking spot for that floor--!--"
+            puts("--!--There is no available parking spot for that floor--!--")
             next
         end
 
@@ -194,13 +194,13 @@ while true
         | Do you want to park here? y/n            |
         |------------------------------------------|
         MENU
-        puts menu
+        puts(menu)
 
         choice = gets.chomp
 
         if choice == "y" || choice == "Y"
-            puts "--!--Your Parking Spot id is #{parking_spot.name}--!--"
-            puts vehicle.engine_sound
+            puts("--!--Your Parking Spot id is #{parking_spot.name}--!--")
+            puts(vehicle.engine_sound)
             vehicle.parking_spot = parking_spot
             parking_spot = vehicle
             break
@@ -213,7 +213,7 @@ while true
         parking_spot = look_for_spot("E")
 
         if parking_spot == nil
-            puts "--!--There is no available parking spot for that floor--!--"
+            puts("--!--There is no available parking spot for that floor--!--")
             next
         end
 
@@ -223,13 +223,13 @@ while true
         | Do you want to park here? y/n            |
         |------------------------------------------|
         MENU
-        puts menu
+        puts(menu)
 
         choice = gets.chomp
 
         if choice == "y" || choice == "Y"
-            puts "--!--Your Parking Spot id is #{parking_spot.name}--!--"
-            puts vehicle.engine_sound
+            puts("--!--Your Parking Spot id is #{parking_spot.name}--!--")
+            puts(vehicle.engine_sound)
             vehicle.parking_spot = parking_spot
             parking_spot = vehicle
             break
@@ -239,10 +239,10 @@ while true
 
         break
     when 6
-        puts "--!--Thank You and Come Again--!--"
+        puts("--!--Thank You and Come Again--!--")
         break
     else
-        puts "--!--Please try again--!--"
+        puts("--!--Please try again--!--")
         next
     end
 end
