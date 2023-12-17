@@ -93,154 +93,154 @@ while (true)
     choice = gets.chomp
 
     case choice.to_i
-    when 1
-        parking_spot = look_for_spot("A")
+        when 1
+            parking_spot = look_for_spot("A")
 
-        if (parking_spot == nil)
-            puts("--!--There is no available parking spot for that floor--!--")
-            next
-        end
+            if (parking_spot == nil)
+                puts("--!--There is no available parking spot for that floor--!--")
+                next
+            end
 
-        menu = <<~MENU
-        |------------------------------------------|
-        | There are available spots for parking A  |
-        | Do you want to park here? y/n            |
-        |------------------------------------------|
-        MENU
-        puts    (menu)
+            menu = <<~MENU
+            |------------------------------------------|
+            | There are available spots for parking A  |
+            | Do you want to park here? y/n            |
+            |------------------------------------------|
+            MENU
+            puts    (menu)
 
-        choice = gets.chomp
+            choice = gets.chomp
 
-        if (choice == "y" || choice == "Y")
-            puts( "--!--Your Parking Spot id is #{parking_spot.name}--!--")
-            puts(vehicle.engine_sound)
-            vehicle.parking_spot = parking_spot
-            parking_spot = vehicle
+            if (choice == "y" || choice == "Y")
+                puts( "--!--Your Parking Spot id is #{parking_spot.name}--!--")
+                puts(vehicle.engine_sound)
+                vehicle.parking_spot = parking_spot
+                parking_spot = vehicle
+                break
+            else 
+                next
+            end
+
             break
-        else 
-            next
-        end
+        when 2
+            parking_spot = look_for_spot("B")
 
-        break
-    when 2
-        parking_spot = look_for_spot("B")
+            if (parking_spot == nil)
+                puts("--!--There is no available parking spot for that floor--!--")
+                next
+            end
 
-        if (parking_spot == nil)
-            puts("--!--There is no available parking spot for that floor--!--")
-            next
-        end
+            menu = <<~MENU
+            |------------------------------------------|
+            | There are available spots for parking B  |
+            | Do you want to park here? y/n            |
+            |------------------------------------------|
+            MENU
+            puts(menu)
 
-        menu = <<~MENU
-        |------------------------------------------|
-        | There are available spots for parking B  |
-        | Do you want to park here? y/n            |
-        |------------------------------------------|
-        MENU
-        puts(menu)
+            choice = gets.chomp
 
-        choice = gets.chomp
+            if (choice == "y" || choice == "Y")
+                puts("--!--Your Parking Spot id is #{parking_spot.name}--!--")
+                vehicle.parking_spot = parking_spot
+                parking_spot = vehicle
+                puts(vehicle.engine_sound)
+                break
+            else 
+                next
+            end
 
-        if (choice == "y" || choice == "Y")
-            puts("--!--Your Parking Spot id is #{parking_spot.name}--!--")
-            vehicle.parking_spot = parking_spot
-            parking_spot = vehicle
-            puts(vehicle.engine_sound)
             break
-        else 
-            next
-        end
+        when 3
+            parking_spot = look_for_spot("C")
 
-        break
-    when 3
-        parking_spot = look_for_spot("C")
+            if (parking_spot == nil)
+                puts("--!--There is no available parking spot for that floor--!--")
+                next
+            end
 
-        if (parking_spot == nil)
-            puts("--!--There is no available parking spot for that floor--!--")
-            next
-        end
+            menu = <<~MENU
+            |------------------------------------------|
+            | There are available spots for parking C  |
+            | Do you want to park here? y/n            |
+            |------------------------------------------|
+            MENU
+            puts(menu)
 
-        menu = <<~MENU
-        |------------------------------------------|
-        | There are available spots for parking C  |
-        | Do you want to park here? y/n            |
-        |------------------------------------------|
-        MENU
-        puts(menu)
+            choice = gets.chomp
 
-        choice = gets.chomp
-
-        if (choice == "y" || choice == "Y")
-            puts("--!--Your Parking Spot id is #{parking_spot.name}--!--")
-            puts(vehicle.engine_sound)
-            vehicle.parking_spot = parking_spot
-            parking_spot = vehicle
+            if (choice == "y" || choice == "Y")
+                puts("--!--Your Parking Spot id is #{parking_spot.name}--!--")
+                puts(vehicle.engine_sound)
+                vehicle.parking_spot = parking_spot
+                parking_spot = vehicle
+                break
+            else 
+                next
+            end
+            
             break
-        else 
-            next
-        end
-        
-        break
-    when 4
-        parking_spot = look_for_spot("D")
+        when 4
+            parking_spot = look_for_spot("D")
 
-        if (parking_spot == nil)
-            puts("--!--There is no available parking spot for that floor--!--")
-            next
-        end
+            if (parking_spot == nil)
+                puts("--!--There is no available parking spot for that floor--!--")
+                next
+            end
 
-        menu = <<~MENU
-        |------------------------------------------|
-        | There are available spots for parking D  |
-        | Do you want to park here? y/n            |
-        |------------------------------------------|
-        MENU
-        puts(menu)
+            menu = <<~MENU
+            |------------------------------------------|
+            | There are available spots for parking D  |
+            | Do you want to park here? y/n            |
+            |------------------------------------------|
+            MENU
+            puts(menu)
 
-        choice = gets.chomp
+            choice = gets.chomp
 
-        if (choice == "y" || choice == "Y")
-            puts("--!--Your Parking Spot id is #{parking_spot.name}--!--")
-            puts(vehicle.engine_sound)
-            vehicle.parking_spot = parking_spot
-            parking_spot = vehicle
+            if (choice == "y" || choice == "Y")
+                puts("--!--Your Parking Spot id is #{parking_spot.name}--!--")
+                puts(vehicle.engine_sound)
+                vehicle.parking_spot = parking_spot
+                parking_spot = vehicle
+                break
+            else 
+                next
+            end
+
             break
-        else 
-            next
-        end
+        when 5
+            parking_spot = look_for_spot("E")
 
-        break
-    when 5
-        parking_spot = look_for_spot("E")
+            if (parking_spot == nil)
+                puts("--!--There is no available parking spot for that floor--!--")
+                next
+            end
 
-        if (parking_spot == nil)
-            puts("--!--There is no available parking spot for that floor--!--")
-            next
-        end
+            menu = <<~MENU
+            |------------------------------------------|
+            | There are available spots for parking E  |
+            | Do you want to park here? y/n            |
+            |------------------------------------------|
+            MENU
+            puts(menu)
 
-        menu = <<~MENU
-        |------------------------------------------|
-        | There are available spots for parking E  |
-        | Do you want to park here? y/n            |
-        |------------------------------------------|
-        MENU
-        puts(menu)
+            choice = gets.chomp
 
-        choice = gets.chomp
+            if (choice == "y" || choice == "Y")
+                puts("--!--Your Parking Spot id is #{parking_spot.name}--!--")
+                puts(vehicle.engine_sound)
+                vehicle.parking_spot = parking_spot
+                parking_spot = vehicle
+                break
+            else 
+                next
+            end
 
-        if (choice == "y" || choice == "Y")
-            puts("--!--Your Parking Spot id is #{parking_spot.name}--!--")
-            puts(vehicle.engine_sound)
-            vehicle.parking_spot = parking_spot
-            parking_spot = vehicle
             break
-        else 
-            next
-        end
-
-        break
-    when 6
-        puts("--!--Thank You and Come Again--!--")
-        break
+        when 6
+            puts("--!--Thank You and Come Again--!--")
+            break
     else
         puts("--!--Please try again--!--")
         next
