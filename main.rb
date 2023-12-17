@@ -21,10 +21,10 @@ vehicles = CSV_OBJECTS[1]
 # @return [Nil] None
 #
 def look_for_spot(floor_number)
-    for floor in @floors do
-        if floor.floor_number == floor_number
-            for p_spot in floor.parking_spots do
-                if p_spot.available == "TRUE"
+    for (floor in @floors) do
+        if (floor.floor_number == floor_number)
+            for (p_spot in floor.parking_spots) do
+                if (p_spot.available == "TRUE")
                     return p_spot
                 end
             end
@@ -33,7 +33,7 @@ def look_for_spot(floor_number)
     return nil
 end
 
-while true
+while (true)
     menu = <<~MENU
         |------------------------------------------|
         | Enter the type of vehicle that you have  |
@@ -75,7 +75,7 @@ while true
     end
 end
 
-while true
+while (true)
     menu = <<~MENU
         |------------------------------------------|
         | Select the floor you'd like to park at   |
@@ -96,7 +96,7 @@ while true
     when 1
         parking_spot = look_for_spot("A")
 
-        if parking_spot == nil
+        if (parking_spot == nil)
             puts("--!--There is no available parking spot for that floor--!--")
             next
         end
@@ -111,7 +111,7 @@ while true
 
         choice = gets.chomp
 
-        if choice == "y" || choice == "Y"
+        if (choice == "y" || choice == "Y")
             puts( "--!--Your Parking Spot id is #{parking_spot.name}--!--")
             puts(vehicle.engine_sound)
             vehicle.parking_spot = parking_spot
@@ -125,7 +125,7 @@ while true
     when 2
         parking_spot = look_for_spot("B")
 
-        if parking_spot == nil
+        if (parking_spot == nil)
             puts("--!--There is no available parking spot for that floor--!--")
             next
         end
@@ -140,7 +140,7 @@ while true
 
         choice = gets.chomp
 
-        if choice == "y" || choice == "Y"
+        if (choice == "y" || choice == "Y")
             puts("--!--Your Parking Spot id is #{parking_spot.name}--!--")
             vehicle.parking_spot = parking_spot
             parking_spot = vehicle
@@ -154,7 +154,7 @@ while true
     when 3
         parking_spot = look_for_spot("C")
 
-        if parking_spot == nil
+        if (parking_spot == nil)
             puts("--!--There is no available parking spot for that floor--!--")
             next
         end
@@ -169,7 +169,7 @@ while true
 
         choice = gets.chomp
 
-        if choice == "y" || choice == "Y"
+        if (choice == "y" || choice == "Y")
             puts("--!--Your Parking Spot id is #{parking_spot.name}--!--")
             puts(vehicle.engine_sound)
             vehicle.parking_spot = parking_spot
@@ -183,7 +183,7 @@ while true
     when 4
         parking_spot = look_for_spot("D")
 
-        if parking_spot == nil
+        if (parking_spot == nil)
             puts("--!--There is no available parking spot for that floor--!--")
             next
         end
@@ -198,7 +198,7 @@ while true
 
         choice = gets.chomp
 
-        if choice == "y" || choice == "Y"
+        if (choice == "y" || choice == "Y")
             puts("--!--Your Parking Spot id is #{parking_spot.name}--!--")
             puts(vehicle.engine_sound)
             vehicle.parking_spot = parking_spot
@@ -212,7 +212,7 @@ while true
     when 5
         parking_spot = look_for_spot("E")
 
-        if parking_spot == nil
+        if (parking_spot == nil)
             puts("--!--There is no available parking spot for that floor--!--")
             next
         end
@@ -227,7 +227,7 @@ while true
 
         choice = gets.chomp
 
-        if choice == "y" || choice == "Y"
+        if (choice == "y" || choice == "Y")
             puts("--!--Your Parking Spot id is #{parking_spot.name}--!--")
             puts(vehicle.engine_sound)
             vehicle.parking_spot = parking_spot
