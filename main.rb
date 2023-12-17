@@ -24,7 +24,8 @@ def look_for_spot(floor_number)
     for floor in @floors do
         if (floor.floor_number == floor_number)
             for p_spot in floor.parking_spot do
-                if (p_spot.available == "TRUE")
+                # Bug: Change the condition to check for boolean value instead of string
+                if (p_spot.available == true)
                     return p_spot
                 end
             end
@@ -246,10 +247,3 @@ while (true)
         next
     end
 end
-
-
-
-
-
-
-

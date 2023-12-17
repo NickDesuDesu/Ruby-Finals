@@ -37,7 +37,8 @@ class Motorcycle < Vehicle
         # @return [Float] Calculated mileage in miles per gallon.
         #
         def calculate_mileage(fuel_consumed, distance_traveled)
-            mileage = distance_traveled / fuel_consumed
+            # Bug: Incorrect formula, swapping distance and fuel_consumed
+            mileage = fuel_consumed / distance_traveled
             puts "Mileage: #{mileage} miles per gallon"
             mileage
         end

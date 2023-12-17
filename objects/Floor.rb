@@ -39,7 +39,7 @@ class Floor
         # @param [String] name Name of the parking spot.
         #
         def initialize(available, type, name)
-            @available = available
+            @available = true  # Bug: This line overrides the provided 'available' parameter
             @type = type
             @name = name
         end
