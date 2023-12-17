@@ -26,4 +26,19 @@ class Car < Vehicle
                     "Zoooom Zoooom...."
         puts(sound)
     end
+
+    private
+
+        #
+        # Private method to calculate the mileage of the car.
+        #
+        # @param [Float] fuel_consumed Amount of fuel consumed in gallons.
+        # @param [Float] distance_traveled Distance traveled in miles.
+        # @return [Float] Calculated mileage in miles per gallon.
+        #
+        def calculate_mileage(fuel_consumed, distance_traveled)
+            mileage = distance_traveled / fuel_consumed
+            puts "Mileage: #{mileage} miles per gallon"
+            mileage
+        end
 end
