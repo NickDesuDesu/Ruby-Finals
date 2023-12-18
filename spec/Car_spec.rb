@@ -1,4 +1,4 @@
-require_relative "./../objects/car.rb"
+require_relative "./../../objects/car.rb"
 
 describe Car do
   it 'adds two numbers' do
