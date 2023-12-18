@@ -1,4 +1,4 @@
-require './raketests/testDemo'
+require 'raketests/testDemo'
 
 include TestDemo
 
