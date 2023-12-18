@@ -1,4 +1,4 @@
-require_relative 'raketests/testDemo'
+require_r 'testDemo'
 
 include TestDemo
 
