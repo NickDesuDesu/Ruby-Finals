@@ -1,7 +1,7 @@
 require_relative "./objects/Car.rb"
 
 
-task default: [:say_hello]
+task default: [:say_hello, :spec]
 
 task :say_hello do
   puts "Hello"
