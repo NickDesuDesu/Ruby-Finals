@@ -1,4 +1,4 @@
-require_r 'testDemo'
+require 'testDemo'
 
 include TestDemo
 
