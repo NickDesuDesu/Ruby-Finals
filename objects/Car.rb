@@ -19,7 +19,27 @@ class Car < Vehicle
     #
     # @return [String] String representation of the sound of the vehicle.
     #
-    def engine_sound
-        puts "Zoooom Zoooom...."    
+    def engine_sound(state=0)
+        sound = if (state == 0)
+                    "brrrrrr..."
+                else
+                    "Zoooom Zoooom...."
+                end
+        puts(sound)
     end
+
+    private
+
+        #
+        # Private method to calculate the mileage of the car.
+        #
+        # @param [Float] fuel_consumed Amount of fuel consumed in gallons.
+        # @param [Float] distance_traveled Distance traveled in miles.
+        # @return [Float] Calculated mileage in miles per gallon.
+        #
+        def calculate_mileage(fuel_consumed, distance_traveled)
+            mileage = distance_traveled / fuel_consumed
+            puts "Mileage: #{mileage} miles per gallon"
+            mileage
+        end
 end
